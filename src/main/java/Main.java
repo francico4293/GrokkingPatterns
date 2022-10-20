@@ -1,14 +1,16 @@
 import twopointers.TwoSum;
 import twopointers.SeparateDuplicates;
 import twopointers.SortedSquares;
+import twopointers.ThreeSum;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[] result = runSortedSquares();
-        System.out.println("Result: " + Arrays.toString(result));
+        List<List<Integer>> results = runThreeSum();
+        System.out.println("Results: " + results);
     }
 
     public static int[] runTwoSum() {
@@ -31,5 +33,12 @@ public class Main {
 
         SortedSquares sortedSquares = new SortedSquares();
         return sortedSquares.sortedSquares(nums);
+    }
+
+    public static List<List<Integer>> runThreeSum() {
+        int[] nums = new int[] { -1, 0, 1, 2, -1, -4 };
+
+        ThreeSum threeSum = new ThreeSum();
+        return threeSum.threeSum(nums);
     }
 }
