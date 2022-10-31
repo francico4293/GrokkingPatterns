@@ -6,6 +6,7 @@ import twopointers.ThreeSumClosest;
 import twopointers.ThreeSumSmaller;
 import twopointers.SubarrayProductLessThanK;
 import twopointers.FourSum;
+import twopointers.BackspaceStringCompare;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,8 +14,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<List<Integer>> results = runFourSum();
-        System.out.println("Results: " + results);
+        Boolean result = runBackspaceStringCompare();
+        System.out.println("Result: " + result);
     }
 
     public static int[] runTwoSum() {
@@ -76,5 +77,13 @@ public class Main {
 
         FourSum fourSum = new FourSum();
         return fourSum.fourSum(nums, target);
+    }
+
+    public static Boolean runBackspaceStringCompare() {
+        String s = "ab##";
+        String t = "c#d#";
+
+        BackspaceStringCompare backspaceStringCompare = new BackspaceStringCompare();
+        return backspaceStringCompare.backspaceCompare(s, t);
     }
 }
