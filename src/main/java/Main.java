@@ -2,6 +2,9 @@ import twopointers.TwoSum;
 import twopointers.SeparateDuplicates;
 import twopointers.SortedSquares;
 import twopointers.ThreeSum;
+import twopointers.ThreeSumClosest;
+import twopointers.ThreeSumSmaller;
+import twopointers.SubarrayProductLessThanK;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,8 +12,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<List<Integer>> results = runThreeSum();
-        System.out.println("Results: " + results);
+        int result = runSubarrayProductLessThanK();
+        System.out.println("Result: " + result);
     }
 
     public static int[] runTwoSum() {
@@ -40,5 +43,29 @@ public class Main {
 
         ThreeSum threeSum = new ThreeSum();
         return threeSum.threeSum(nums);
+    }
+
+    public static int runThreeSumClosest() {
+        int[] nums = new int[] { -1, 2, 1, -4 };
+        int target = 1;
+
+        ThreeSumClosest threeSumClosest = new ThreeSumClosest();
+        return threeSumClosest.threeSumClosest(nums, target);
+    }
+
+    public static int runThreeSumSmaller() {
+        int[] nums = new int[] {3,2,-2,6,2,-2,6,-2,-4,2,3,0,4,4,1};
+        int target = 3;
+
+        ThreeSumSmaller threeSumSmaller = new ThreeSumSmaller();
+        return threeSumSmaller.threeSumSmaller(nums, target);
+    }
+
+    public static int runSubarrayProductLessThanK() {
+        int[] nums = new int[] { 10, 5, 2, 6 };
+        int k = 100;
+
+        SubarrayProductLessThanK subarrayProductLessThanK = new SubarrayProductLessThanK();
+        return subarrayProductLessThanK.numSubarrayProductLessThanK(nums, k);
     }
 }
