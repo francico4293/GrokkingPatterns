@@ -11,6 +11,7 @@ import twopointers.MinimumWindowSort;
 
 import mergeintervals.MergeIntervals;
 import mergeintervals.InsertInterval;
+import mergeintervals.IntervalsIntersection;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int[][] results = runInsertInterval();
+        int[][] results = runIntervalsIntersection();
 
         System.out.println("Results:");
         for (int[] result : results) {
@@ -115,5 +116,13 @@ public class Main {
 
         InsertInterval insertInterval = new InsertInterval();
         return insertInterval.insert(intervals, newInterval);
+    }
+
+    public static int[][] runIntervalsIntersection() {
+        int[][] firstList = new int[][] { { 0, 2 }, { 5, 10 }, { 13, 23 }, { 24, 25 } };
+        int[][] secondList = new int[][] { { 1, 5 }, { 8, 12 }, { 15, 24 }, { 25, 26 } };
+
+        IntervalsIntersection intervalsIntersection = new IntervalsIntersection();
+        return intervalsIntersection.intervalIntersection(firstList, secondList);
     }
 }
