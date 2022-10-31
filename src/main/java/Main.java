@@ -9,14 +9,20 @@ import twopointers.FourSum;
 import twopointers.BackspaceStringCompare;
 import twopointers.MinimumWindowSort;
 
+import mergeintervals.MergeIntervals;
+
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        int result = runMinimumWindowSort();
-        System.out.println("Result: " + result);
+        int[][] results = runMergeIntervals();
+
+        System.out.println("Results: ");
+        for (int[] result : results) {
+            System.out.println(Arrays.toString(result));
+        }
     }
 
     public static int[] runTwoSum() {
@@ -93,5 +99,12 @@ public class Main {
 
         MinimumWindowSort minimumWindowSort = new MinimumWindowSort();
         return minimumWindowSort.findUnsortedSubarray(nums);
+    }
+
+    public static int[][] runMergeIntervals() {
+        int[][] intervals = new int[][] { { 8, 10 }, { 1, 3 }, { 15, 18 }, { 2, 6 } };
+
+        MergeIntervals mergeIntervals = new MergeIntervals();
+        return mergeIntervals.merge(intervals);
     }
 }
