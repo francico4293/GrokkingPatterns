@@ -10,6 +10,7 @@ import twopointers.BackspaceStringCompare;
 import twopointers.MinimumWindowSort;
 
 import mergeintervals.MergeIntervals;
+import mergeintervals.InsertInterval;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,9 +18,9 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int[][] results = runMergeIntervals();
+        int[][] results = runInsertInterval();
 
-        System.out.println("Results: ");
+        System.out.println("Results:");
         for (int[] result : results) {
             System.out.println(Arrays.toString(result));
         }
@@ -106,5 +107,13 @@ public class Main {
 
         MergeIntervals mergeIntervals = new MergeIntervals();
         return mergeIntervals.merge(intervals);
+    }
+
+    public static int[][] runInsertInterval() {
+        int[][] intervals = new int[][] { { 1, 2 }, { 3, 5 }, { 6, 7 }, { 8, 10 }, { 12, 16 } };
+        int[] newInterval = new int[] { 4, 8 };
+
+        InsertInterval insertInterval = new InsertInterval();
+        return insertInterval.insert(intervals, newInterval);
     }
 }
