@@ -7,6 +7,7 @@ import twopointers.ThreeSumSmaller;
 import twopointers.SubarrayProductLessThanK;
 import twopointers.FourSum;
 import twopointers.BackspaceStringCompare;
+import twopointers.MinimumWindowSort;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        Boolean result = runBackspaceStringCompare();
+        int result = runMinimumWindowSort();
         System.out.println("Result: " + result);
     }
 
@@ -85,5 +86,12 @@ public class Main {
 
         BackspaceStringCompare backspaceStringCompare = new BackspaceStringCompare();
         return backspaceStringCompare.backspaceCompare(s, t);
+    }
+
+    public static int runMinimumWindowSort() {
+        int[] nums = new int[] { 2, 6, 4, 8, 10, 9, 15 };
+
+        MinimumWindowSort minimumWindowSort = new MinimumWindowSort();
+        return minimumWindowSort.findUnsortedSubarray(nums);
     }
 }
