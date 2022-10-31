@@ -5,6 +5,7 @@ import twopointers.ThreeSum;
 import twopointers.ThreeSumClosest;
 import twopointers.ThreeSumSmaller;
 import twopointers.SubarrayProductLessThanK;
+import twopointers.FourSum;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,8 +13,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int result = runSubarrayProductLessThanK();
-        System.out.println("Result: " + result);
+        List<List<Integer>> results = runFourSum();
+        System.out.println("Results: " + results);
     }
 
     public static int[] runTwoSum() {
@@ -67,5 +68,13 @@ public class Main {
 
         SubarrayProductLessThanK subarrayProductLessThanK = new SubarrayProductLessThanK();
         return subarrayProductLessThanK.numSubarrayProductLessThanK(nums, k);
+    }
+
+    public static List<List<Integer>> runFourSum() {
+        int[] nums = new int[] { 1, 0, -1, 0, -2, 2 };
+        int target = 0;
+
+        FourSum fourSum = new FourSum();
+        return fourSum.fourSum(nums, target);
     }
 }
