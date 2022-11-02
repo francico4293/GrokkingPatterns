@@ -12,6 +12,7 @@ import twopointers.MinimumWindowSort;
 import mergeintervals.MergeIntervals;
 import mergeintervals.InsertInterval;
 import mergeintervals.IntervalsIntersection;
+import mergeintervals.MinimumMeetingRooms;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,12 +20,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int[][] results = runIntervalsIntersection();
-
-        System.out.println("Results:");
-        for (int[] result : results) {
-            System.out.println(Arrays.toString(result));
-        }
+        int result = runMinimumMeetingRooms();
+        System.out.println("Result: " + result);
     }
 
     public static int[] runTwoSum() {
@@ -124,5 +121,12 @@ public class Main {
 
         IntervalsIntersection intervalsIntersection = new IntervalsIntersection();
         return intervalsIntersection.intervalIntersection(firstList, secondList);
+    }
+
+    public static int runMinimumMeetingRooms() {
+        int[][] intervals = new int[][] { { 4, 5 }, { 2, 3 }, { 2, 4 }, { 3, 5 } };
+
+        MinimumMeetingRooms minimumMeetingRooms = new MinimumMeetingRooms();
+        return minimumMeetingRooms.minMeetingRooms(intervals);
     }
 }
