@@ -1,14 +1,8 @@
 import mergeintervals.*;
-import twopointers.TwoSum;
-import twopointers.SeparateDuplicates;
-import twopointers.SortedSquares;
-import twopointers.ThreeSum;
-import twopointers.ThreeSumClosest;
-import twopointers.ThreeSumSmaller;
-import twopointers.SubarrayProductLessThanK;
-import twopointers.FourSum;
-import twopointers.BackspaceStringCompare;
-import twopointers.MinimumWindowSort;
+
+import twopointers.*;
+
+import cyclicsort.*;
 
 import utils.Interval;
 
@@ -19,8 +13,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<Interval> result = runEmployeeFreeTime();
-        System.out.println("Result: " + result);
+        runCyclicSort();
     }
 
     public static int[] runTwoSum() {
@@ -140,5 +133,16 @@ public class Main {
 
         EmployeeFreeTime employeeFreeTime = new EmployeeFreeTime();
         return employeeFreeTime.employeeFreeTime(schedules);
+    }
+
+    public static void runCyclicSort() {
+        int[] nums = new int[] { 2, 6, 4, 3, 1, 5 };
+
+        System.out.println("Before: " + Arrays.toString(nums));
+
+        CyclicSort cyclicSort = new CyclicSort();
+        cyclicSort.sort(nums);
+
+        System.out.println("After: " + Arrays.toString(nums));
     }
 }
