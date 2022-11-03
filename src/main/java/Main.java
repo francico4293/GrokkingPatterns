@@ -13,7 +13,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        runCyclicSort();
+        int result = runMissingNumber();
+        System.out.println("Result: " + result);
     }
 
     public static int[] runTwoSum() {
@@ -144,5 +145,12 @@ public class Main {
         cyclicSort.sort(nums);
 
         System.out.println("After: " + Arrays.toString(nums));
+    }
+
+    public static int runMissingNumber() {
+        int[] nums = new int[]{9, 6, 4, 2, 3, 5, 7, 0, 1};
+
+        MissingNumber missingNumber = new MissingNumber();
+        return missingNumber.missingNumber(nums);
     }
 }
