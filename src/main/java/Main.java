@@ -13,8 +13,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int result = runFindTheDuplicateNumber();
-        System.out.println("Result: " + result);
+        List<Integer> results = runFindAllDuplicateNumbers();
+        System.out.println("Results: " + results);
     }
 
     public static int[] runTwoSum() {
@@ -166,5 +166,12 @@ public class Main {
 
         FindTheDuplicateNumber findTheDuplicateNumber = new FindTheDuplicateNumber();
         return findTheDuplicateNumber.findDuplicate(nums);
+    }
+
+    public static List<Integer> runFindAllDuplicateNumbers() {
+        int[] nums = new int[] { 4, 3, 2, 7, 8, 2, 3, 1 };
+
+        FindAllDuplicateNumbers findAllDuplicateNumbers = new FindAllDuplicateNumbers();
+        return findAllDuplicateNumbers.findDuplicates(nums);
     }
 }
