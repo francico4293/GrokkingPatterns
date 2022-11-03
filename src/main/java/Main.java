@@ -1,3 +1,4 @@
+import mergeintervals.*;
 import twopointers.TwoSum;
 import twopointers.SeparateDuplicates;
 import twopointers.SortedSquares;
@@ -9,18 +10,16 @@ import twopointers.FourSum;
 import twopointers.BackspaceStringCompare;
 import twopointers.MinimumWindowSort;
 
-import mergeintervals.MergeIntervals;
-import mergeintervals.InsertInterval;
-import mergeintervals.IntervalsIntersection;
-import mergeintervals.MinimumMeetingRooms;
+import utils.Interval;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        int result = runMinimumMeetingRooms();
+        List<Interval> result = runEmployeeFreeTime();
         System.out.println("Result: " + result);
     }
 
@@ -128,5 +127,18 @@ public class Main {
 
         MinimumMeetingRooms minimumMeetingRooms = new MinimumMeetingRooms();
         return minimumMeetingRooms.minMeetingRooms(intervals);
+    }
+
+    public static List<Interval> runEmployeeFreeTime() {
+        List<List<Interval>> schedules = new ArrayList<>(
+                List.of(
+                        List.of(new Interval(1, 3), new Interval(6, 7)),
+                        List.of(new Interval(2, 4)),
+                        List.of(new Interval(2, 5), new Interval(9, 12))
+                )
+        );
+
+        EmployeeFreeTime employeeFreeTime = new EmployeeFreeTime();
+        return employeeFreeTime.employeeFreeTime(schedules);
     }
 }
