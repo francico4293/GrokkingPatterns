@@ -13,8 +13,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int result = runFirstMissingPositive();
-        System.out.println("Result: " + result);
+        List<Integer> results = runFirstKMissingPositiveNumbers();
+        System.out.println("Results: " + results);
     }
 
     public static int[] runTwoSum() {
@@ -180,5 +180,13 @@ public class Main {
 
         FirstMissingPositive firstMissingPositive = new FirstMissingPositive();
         return firstMissingPositive.firstMissingPositive(nums);
+    }
+
+    public static List<Integer> runFirstKMissingPositiveNumbers() {
+        int[] nums = new int[] { -2, -3, 4 };
+        int k = 2;
+
+        FirstKMissingPositiveNumbers firstKMissingPositiveNumbers = new FirstKMissingPositiveNumbers();
+        return firstKMissingPositiveNumbers.firstKMissing(nums, k);
     }
 }

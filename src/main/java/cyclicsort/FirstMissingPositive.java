@@ -7,7 +7,7 @@ public class FirstMissingPositive {
 
         int idx = 0;
         while (idx < numsLength) {
-            if (nums[idx] > 0 && nums[idx] < numsLength && nums[idx] != nums[nums[idx] - 1]) {
+            if (nums[idx] > 0 && nums[idx] <= numsLength && nums[idx] != nums[nums[idx] - 1]) {
                 swap(nums, idx, nums[idx] - 1);
             } else {
                 idx++;
