@@ -4,6 +4,8 @@ import twopointers.*;
 
 import cyclicsort.*;
 
+import islands.*;
+
 import utils.Interval;
 
 import java.util.ArrayList;
@@ -13,8 +15,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<Integer> results = runFirstKMissingPositiveNumbers();
-        System.out.println("Results: " + results);
+        int result = runNumberOfIslands();
+        System.out.println("Result: " + result);
     }
 
     public static int[] runTwoSum() {
@@ -188,5 +190,17 @@ public class Main {
 
         FirstKMissingPositiveNumbers firstKMissingPositiveNumbers = new FirstKMissingPositiveNumbers();
         return firstKMissingPositiveNumbers.firstKMissing(nums, k);
+    }
+
+    public static int runNumberOfIslands() {
+        char[][] grid = {
+                { '1', '1', '0', '0', '0' },
+                { '1', '1', '0', '0', '0' },
+                { '0', '0', '1', '0', '0' },
+                { '0', '0', '0', '1', '1' }
+            };
+
+        NumberOfIslands numberOfIslands = new NumberOfIslands();
+        return numberOfIslands.numIslands(grid);
     }
 }
