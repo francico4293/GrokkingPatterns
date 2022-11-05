@@ -15,7 +15,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int result = runNumberOfIslands();
+        int result = runNumberOfClosedIslands();
         System.out.println("Result: " + result);
     }
 
@@ -202,5 +202,18 @@ public class Main {
 
         NumberOfIslands numberOfIslands = new NumberOfIslands();
         return numberOfIslands.numIslands(grid);
+    }
+
+    public static int runNumberOfClosedIslands() {
+        int[][] grid = {
+                { 1, 1, 1, 1, 1, 1, 1, 0 },
+                { 1, 0, 0, 0, 0, 1, 1, 0 },
+                { 1, 0, 1, 0, 1, 1, 1, 0 },
+                { 1, 0, 0, 0, 0, 1, 0, 1 },
+                { 1, 1, 1, 1, 1, 1, 1, 0 }
+        };
+
+        NumberOfClosedIslands numberOfClosedIslands = new NumberOfClosedIslands();
+        return numberOfClosedIslands.closedIsland(grid);
     }
 }
