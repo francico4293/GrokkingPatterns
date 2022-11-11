@@ -1,3 +1,4 @@
+import islandsrecursive.CycleInAMatrix;
 import mergeintervals.*;
 
 import twopointers.*;
@@ -15,7 +16,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int result = runNumberOfDistinctIslands();
+        boolean result = runCycleInAMatrix();
         System.out.println("Result: " + result);
     }
 
@@ -239,5 +240,16 @@ public class Main {
 
         NumberOfDistinctIslands numberOfDistinctIslands = new NumberOfDistinctIslands();
         return numberOfDistinctIslands.numDistinctIslands(grid);
+    }
+
+    public static boolean runCycleInAMatrix() {
+        char[][] grid = new char[][] {
+                { 'c', 'c', 'c', 'a' },
+                { 'c', 'd', 'c', 'c' },
+                { 'c', 'c', 'e', 'c' },
+                { 'f', 'c', 'c', 'c' } };
+
+        CycleInAMatrix cycleInAMatrix = new CycleInAMatrix();
+        return cycleInAMatrix.containsCycle(grid);
     }
 }
