@@ -7,6 +7,8 @@ import cyclicsort.*;
 
 import islands.*;
 
+import slidingwindow.*;
+
 import utils.Interval;
 
 import java.util.ArrayList;
@@ -16,7 +18,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        boolean result = runCycleInAMatrix();
+        int result = runLongestSubstringWithKDistinctChars();
         System.out.println("Result: " + result);
     }
 
@@ -251,5 +253,14 @@ public class Main {
 
         CycleInAMatrix cycleInAMatrix = new CycleInAMatrix();
         return cycleInAMatrix.containsCycle(grid);
+    }
+
+    public static int runLongestSubstringWithKDistinctChars() {
+        String s = "eceba";
+        int k = 2;
+
+        LongestSubstringWithKDistinctChars longestSubstringWithKDistinctChars =
+                new LongestSubstringWithKDistinctChars();
+        return longestSubstringWithKDistinctChars.lengthOfLongestSubstringKDistinct(s, k);
     }
 }
