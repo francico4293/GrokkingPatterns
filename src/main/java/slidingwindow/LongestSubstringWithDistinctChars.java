@@ -3,8 +3,6 @@ package slidingwindow;
 import java.util.Map;
 import java.util.HashMap;
 
-// abcabcbb
-
 public class LongestSubstringWithDistinctChars {
 
     public int lengthOfLongestSubstring(String s) {

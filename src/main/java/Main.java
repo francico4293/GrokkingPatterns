@@ -18,7 +18,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int result = runLongestSubstringWithDistinctChars();
+        int result = runMaxConsecutiveOnes();
         System.out.println("Result: " + result);
     }
 
@@ -276,5 +276,13 @@ public class Main {
 
         LongestSubstringWithDistinctChars longestSubstringWithDistinctChars = new LongestSubstringWithDistinctChars();
         return longestSubstringWithDistinctChars.lengthOfLongestSubstring(s);
+    }
+
+    public static int runMaxConsecutiveOnes() {
+        int[] nums = new int[] { 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1 };
+        int k = 3;
+
+        MaxConsecutiveOnes maxConsecutiveOnes = new MaxConsecutiveOnes();
+        return maxConsecutiveOnes.longestOnes(nums, k);
     }
 }
