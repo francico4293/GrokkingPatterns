@@ -18,7 +18,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int result = runFruitIntoBaskets();
+        int result = runLongestSubstringWithDistinctChars();
         System.out.println("Result: " + result);
     }
 
@@ -269,5 +269,12 @@ public class Main {
 
         FruitIntoBaskets fruitIntoBaskets = new FruitIntoBaskets();
         return fruitIntoBaskets.totalFruit(fruits);
+    }
+
+    public static int runLongestSubstringWithDistinctChars() {
+        String s = "pwwkew";
+
+        LongestSubstringWithDistinctChars longestSubstringWithDistinctChars = new LongestSubstringWithDistinctChars();
+        return longestSubstringWithDistinctChars.lengthOfLongestSubstring(s);
     }
 }
