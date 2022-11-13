@@ -18,8 +18,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        boolean result = runPermutationsInString();
-        System.out.println("Result: " + result);
+        List<Integer> results = runStringAnagrams();
+        System.out.println("Result: " + results);
     }
 
     public static int[] runTwoSum() {
@@ -292,5 +292,13 @@ public class Main {
 
         PermutationsInString permutationsInString = new PermutationsInString();
         return permutationsInString.checkInclusion(s1, s2);
+    }
+
+    public static List<Integer> runStringAnagrams() {
+        String s = "cbaebabacd";
+        String p = "abc";
+
+        StringAnagrams stringAnagrams = new StringAnagrams();
+        return stringAnagrams.findAnagrams(s, p);
     }
 }
