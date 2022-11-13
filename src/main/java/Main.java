@@ -18,7 +18,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int result = runMaxConsecutiveOnes();
+        boolean result = runPermutationsInString();
         System.out.println("Result: " + result);
     }
 
@@ -284,5 +284,13 @@ public class Main {
 
         MaxConsecutiveOnes maxConsecutiveOnes = new MaxConsecutiveOnes();
         return maxConsecutiveOnes.longestOnes(nums, k);
+    }
+
+    public static boolean runPermutationsInString() {
+        String s1 = "adc";
+        String s2 = "dcda";
+
+        PermutationsInString permutationsInString = new PermutationsInString();
+        return permutationsInString.checkInclusion(s1, s2);
     }
 }
