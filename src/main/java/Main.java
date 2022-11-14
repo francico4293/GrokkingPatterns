@@ -18,8 +18,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<Integer> results = runStringAnagrams();
-        System.out.println("Result: " + results);
+        String result = runMinimumWindowSubstring();
+        System.out.println("Result: " + result);
     }
 
     public static int[] runTwoSum() {
@@ -300,5 +300,22 @@ public class Main {
 
         StringAnagrams stringAnagrams = new StringAnagrams();
         return stringAnagrams.findAnagrams(s, p);
+    }
+
+    public static int runLongestRepeatingCharacterReplacement() {
+        String s = "AABABBA";
+        int k = 1;
+
+        LongestRepeatingCharacterReplacement longestRepeatingCharacterReplacement =
+                new LongestRepeatingCharacterReplacement();
+        return longestRepeatingCharacterReplacement.characterReplacement(s, k);
+    }
+
+    public static String runMinimumWindowSubstring() {
+        String s = "ADOBECODEBANC";
+        String t = "ABC";
+
+        MinimumWindowSubstring minimumWindowSubstring = new MinimumWindowSubstring();
+        return minimumWindowSubstring.minWindow(s, t);
     }
 }
