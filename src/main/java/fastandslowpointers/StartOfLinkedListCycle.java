@@ -20,31 +20,31 @@ public class StartOfLinkedListCycle {
         return null;
     }
 
-    private int findCycleLength(ListNode node) {
-        int length = 0;
-        ListNode currNode = node;
+    private int findCycleLength(ListNode startingNode) {
+        int length = 1;
+        ListNode currNode = startingNode.next;
 
-        do {
+        while (!startingNode.equals(currNode)) {
             currNode = currNode.next;
             length++;
-        } while (!node.equals(currNode));
+        }
 
         return length;
     }
 
     private ListNode findCycleStart(ListNode head, int cycleLength) {
-        ListNode node1 = head, node2 = head;
+        ListNode first = head, second = head;
 
         while (cycleLength > 0) {
-            node2 = node2.next;
+            second = second.next;
             cycleLength--;
         }
 
-        while (!node1.equals(node2)) {
-            node1 = node1.next;
-            node2 = node2.next;
+        while (first != second) {
+            first = first.next;
+            second = second.next;
         }
 
-        return node1;
+        return first;
     }
 }
