@@ -1,13 +1,12 @@
-import slidingwindow.MaximumSizeSubarraySum;
+import slidingwindow.PermutationInString;
 
 public class Main {
 
     public static void main(String[] args) {
-        int target = 4;
-        int[] nums = new int[] { 1, 4, 4 };
+        String s1 = "ab", s2 = "eidboaoo";
 
-        MaximumSizeSubarraySum maximumSizeSubarraySum = new MaximumSizeSubarraySum();
-        int result = maximumSizeSubarraySum.minSubArrayLen(target, nums);
-        System.out.println("Result " + result);
+        PermutationInString permutationInString = new PermutationInString();
+        boolean result = permutationInString.checkInclusion(s1, s2);
+        System.out.println("Result = " + result);
     }
 }
